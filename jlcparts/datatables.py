@@ -202,7 +202,7 @@ def extractComponent(component, schema):
                 attr = dict([normalizeAttribute(key, val) for key, val in attr.items()])
                 propertyList.append(attr)
             elif schItem == "images":
-                images = component.get("extra", {}).get("images", [])
+                images = component.get("extra", {}).get("images", [])[:1]
                 propertyList.append(images)
             elif schItem == "url":
                 url = component.get("extra", {}).get("url", None)
